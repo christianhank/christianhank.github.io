@@ -69,11 +69,11 @@
                 textArea = document.getElementById("text").value
                 placeholder = textArea
                 preview.innerHTML = placeholder
-                console.log(textArea)
             }
+            console.log(window.getSelection())
         }
 
-
+        // Object of usable Tags
         let tags = {
             h1: ["<h1>", "</h1>"],
             h2: ["<h2>", "</h2>"],
@@ -91,12 +91,12 @@
 
 
         document.addEventListener('keydown', function (e) {
-
+            console.log(window.getSelection())
             if (window.getSelection().toString()) {
 
                 if (e.keyCode == 80) { // p 
                     replaceSelectedText(window.getSelection().toString(), tags.p)
-                    // e.keypress = '1';
+                   
                     e.preventDefault();
                     return false;
 
@@ -104,7 +104,7 @@
 
                 if (e.keyCode == 49) { // h1 1
                     replaceSelectedText(window.getSelection().toString(), tags.h1)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
@@ -112,7 +112,7 @@
 
                 if (e.keyCode == 50) { // h2 2
                     replaceSelectedText(window.getSelection().toString(), tags.h2)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
@@ -120,7 +120,7 @@
 
                 if (e.keyCode == 51) { // h3 3
                     replaceSelectedText(window.getSelection().toString(), tags.h2)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
@@ -128,7 +128,7 @@
 
                 if (e.keyCode == 83) { // strong s
                     replaceSelectedText(window.getSelection().toString(), tags.strong)
-                    // e.keypress = '1';
+                   
                     e.preventDefault();
                     return false;
 
@@ -136,7 +136,7 @@
 
                 if (e.keyCode == 65) { // anker a
                     replaceSelectedText(window.getSelection().toString(), tags.anker)
-                    // e.keypress = '1';
+                   
                     e.preventDefault();
                     return false;
 
@@ -144,7 +144,7 @@
 
                 if (e.keyCode == 79) { // ol o
                     replaceSelectedText(window.getSelection().toString(), tags.ol)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
@@ -152,7 +152,7 @@
 
                 if (e.keyCode == 85) { // ul u
                     replaceSelectedText(window.getSelection().toString(), tags.ul)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
@@ -160,7 +160,7 @@
 
                 if (e.keyCode == 76) { // list element l
                     replaceSelectedText(window.getSelection().toString(), tags.li)
-                    // e.keypress = '1';
+                    
                     e.preventDefault();
                     return false;
 
